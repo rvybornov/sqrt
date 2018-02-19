@@ -2,7 +2,7 @@
 from math import sqrt
 
 import sys
-import logging, logging.config 
+import logging
 import argparse
 
 logger = logging.getLogger('Mod1')
@@ -27,12 +27,12 @@ parser.add_argument('b', help='second coefficient of trinomial')
 parser.add_argument('c', help='third coefficient of trinomial')   
 args = parser.parse_args()
               
-if len (sys.argv) <= 3:
-    logger.debug("Not enough parameters")
-    sys.exit (1)
-if len (sys.argv) > 4:
-    logger.debug("Too many parameters")
-    sys.exit (1)
+# if len (sys.argv) <= 3:
+#    logger.debug("Not enough parameters")
+#    sys.exit (1)
+# if len (sys.argv) > 4:
+#    logger.debug("Too many parameters")
+#    sys.exit (1)
 
 a = int(sys.argv[1])
 b = int(sys.argv[2])
