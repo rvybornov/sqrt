@@ -6,7 +6,7 @@ import logging.config
 import argparse
 
 logging.config.fileConfig('sqrtlogging.conf')
-logger = logging.getLogger("root")
+logger = logging.getLogger("Module1")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('a', help='first coefficient of trinomial')
