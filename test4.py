@@ -1,25 +1,12 @@
-
 from math import sqrt
 
 import sys
 import logging
+import logging.config
 import argparse
 
-logger = logging.getLogger('Mod1')
-logger.setLevel(logging.DEBUG)
-
-FH = logging.FileHandler('test4.log')
-FH.setLevel(logging.DEBUG)
-
-CONSH = logging.StreamHandler()
-CONSH.setLevel(logging.DEBUG)
-
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-CONSH.setFormatter(formatter)
-FH.setFormatter(formatter)
-
-logger.addHandler(CONSH)
-logger.addHandler(FH)
+logging.config.fileConfig('sqrtlogging.conf')
+logger = logging.getLogger("root")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('a', help='first coefficient of trinomial')
